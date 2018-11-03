@@ -1,5 +1,4 @@
-
-################ Installation ################
+########## Installation ##########
 install.packages("devtools") # if not installed
 install.packages("FinancialInstrument") #if not installed
 install.packages("PerformanceAnalytics") #if not installed
@@ -9,7 +8,7 @@ devtools::install_github("braverock/blotter")
 # next install quantstrat from GitHub
 devtools::install_github("braverock/quantstrat")
 
-##############################################
+##################################
 
 library(quantstrat)
 # Supress warnings
@@ -31,10 +30,10 @@ symbols <- c("XLE", # SPDR Energy sector
              "EWU", # iShares UK
              "EWY", # iShares Korea
              "EPP" # iShares Pacific Ex Japan
-             )
+)
 
 suppressMessages(getSymbols(symbols, from="2016-01-01", to="2018-11-01", src="yahoo", adjust=TRUE))
-
+stock(symbols, currency="USD", multplier=1)
 
 
 
