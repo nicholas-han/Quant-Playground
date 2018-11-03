@@ -1,3 +1,4 @@
+
 ################ Installation ################
 install.packages("devtools") # if not installed
 install.packages("FinancialInstrument") #if not installed
