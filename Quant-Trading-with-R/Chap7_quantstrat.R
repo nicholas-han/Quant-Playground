@@ -1,4 +1,4 @@
-########## Installation ##########
+################ Installation ################
 install.packages("devtools") # if not installed
 install.packages("FinancialInstrument") #if not installed
 install.packages("PerformanceAnalytics") #if not installed
@@ -8,7 +8,7 @@ devtools::install_github("braverock/blotter")
 # next install quantstrat from GitHub
 devtools::install_github("braverock/quantstrat")
 
-##################################
+##############################################
 
 library(quantstrat)
 # Supress warnings
