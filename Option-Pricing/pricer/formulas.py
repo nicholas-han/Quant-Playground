@@ -53,7 +53,6 @@ class Option:
             price =  norm.cdf(-d2) * strike * np.exp(-intRate*timeToMat) - \
                                     norm.cdf(-d1) * spot * np.exp(-divYield*timeToMat)
 
-        print(price)
         return price
 
 
@@ -95,7 +94,6 @@ class Option:
         outputDict['Gamma'] = np.exp(-divYield*timeToMat) * norm.pdf(d1) / (spot * vol * np.sqrt(timeToMat))
         outputDict['Vega'] = spot * np.exp(-divYield*timeToMat) * norm.pdf(d1) * np.sqrt(timeToMat) / 100
 
-        print(outputDict)
         return outputDict
 
 
@@ -118,7 +116,6 @@ class Option:
         outputDict['ImpVol'] = impVol
         del outputDict['Price']
 
-        print(outputDict['ImpVol'])
         return outputDict
 
 

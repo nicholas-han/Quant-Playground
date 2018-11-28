@@ -1,10 +1,16 @@
 import sys
 import numpy as np
 import pandas as pd
+import matplotlib.pyplot as plt
 
 import formulas
 
+timeToMats = 0.1 * np.arange(80)
+thetas = []
+myOptionObject = formulas.Option()
+for timeToMat in timeToMats:
+    greeks = myOptionObject.bsGreeks(parity='put', spot=12, strike=15, vol=0.30, intRate=0.02, divYield=0.0, timeToMat=float(timeToMat))
+    thetas.append(greeks['Theta'])
 
-
-myOptionObject = formulas.Option(parity='call', spot=12.4, strike=12, vol=0.30, intRate=0.03, divYield=0.0, timeToMat=1)
-myOptionObject.bsGreeks()
+plt.plot(timeToMats, thetas)
+plt.show()
