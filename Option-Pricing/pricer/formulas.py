@@ -8,7 +8,7 @@ class Option:
 
     def __init__(self, debug=False, **args):
 
-        if not debug: # don't show TraceBack if not in debug mode
+        if not debug: # NOTE: don't show TraceBack if not in debug mode
             sys.tracebacklimit = 0
 
         self.parity = None
@@ -24,9 +24,7 @@ class Option:
 
         self._loadParams(**args)
 
-
     def updateParams(self, **args):
-
         self._loadParams(**args)
 
 
