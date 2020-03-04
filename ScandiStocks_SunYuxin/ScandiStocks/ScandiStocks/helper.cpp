@@ -3,6 +3,7 @@
 
 Date::Date(string date_str, const char delim) {
     if (delim != '\0') {
+        if (date_str.length() != 10) throw InvalidDate();
         istringstream iss(date_str);
         string year_str, month_str, day_str;
         getline(iss, year_str, '-');
@@ -13,6 +14,7 @@ Date::Date(string date_str, const char delim) {
         day = stoi(day_str);
     }
     else {
+        if (date_str.length() != 8) throw InvalidDate();
         year = stoi(date_str.substr(0, 4));
         month = stoi(date_str.substr(4, 2));
         day = stoi(date_str.substr(6, 2));

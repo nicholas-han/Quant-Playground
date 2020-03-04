@@ -10,7 +10,7 @@ using namespace std;
 
 int main(int argc, const char *argv[]) {
     // load data
-    string abs_file_path = "/Users/nhan/git/Quant-Playground/Scandinavian_Stocks_SunYuxin/ScandiStockDataCheck/ScandiStockDataCheck/scandi.csv";
+    string abs_file_path = "/Users/nhan/git/Quant-Playground/ScandiStocks_SunYuxin/ScandiStocks/ScandiStocks/scandi.csv";
     vector<Tick> rows = loadDataByRow(abs_file_path, 5);
     // print data
     for (size_t i = 0, n = rows.size(); i < n; ++i)
